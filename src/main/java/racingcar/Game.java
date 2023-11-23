@@ -1,11 +1,11 @@
 package racingcar;
 
 public class Game {
-    InputView inputView = new InputView();
-    OutputView outputView = new OutputView();
+    private final InputView inputView = new InputView();
+    private final OutputView outputView = new OutputView();
 
-    Cars cars;
-    int count;
+    private Cars cars;
+    private int count;
 
     void start() {
         setupGameDetails();

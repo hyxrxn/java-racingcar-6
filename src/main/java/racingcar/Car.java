@@ -3,8 +3,8 @@ package racingcar;
 import camp.nextstep.edu.missionutils.Randoms;
 
 public class Car {
-    String name;
-    int location;
+    private final String name;
+    private int location;
 
     Car(String name){
         this.name = name;

@@ -3,7 +3,7 @@ package racingcar;
 import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
-    Validator validator = new Validator();
+    private final Validator validator = new Validator();
 
     String[] readCarNames() {
         String inputNames = Console.readLine();
