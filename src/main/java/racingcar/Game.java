@@ -7,14 +7,23 @@ public class Game {
     Cars cars;
     int count;
 
-    void play() {
+    void start() {
         setupGameDetails();
+        play();
     }
 
-    void setupGameDetails(){
+    void setupGameDetails() {
         outputView.printCarNameRequestMessage();
         cars = new Cars(inputView.readCarNames());
         outputView.printCountRequestMessage();
         count = inputView.readCount();
+    }
+
+    void play() {
+        outputView.printResultStartMessage();
+        for (int i = 0; i < count; i++) {
+            cars.updateLocation();
+            cars.printLocation();
+        }
     }
 }
