@@ -25,4 +25,18 @@ public class Cars {
         }
         System.out.println();
     }
+
+    void chooseWinner(){
+        int farthestLocation = 0;
+        for (Car car : cars) {
+            farthestLocation = Math.max(farthestLocation, car.getLocation());
+        }
+        List<String> winners = new ArrayList<>();
+        for (Car car : cars) {
+            if(car.getLocation() == farthestLocation){
+                winners.add(car.getName());
+            }
+        }
+        System.out.println(String.join(", ", winners));
+    }
 }

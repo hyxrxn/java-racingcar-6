@@ -21,4 +21,12 @@ public class Car {
     void printLocation() {
         System.out.println(name + " : " + "-".repeat(location));
     }
+
+    int getLocation() {
+        return location;
+    }
+
+    String getName() {
+        return name;
+    }
 }

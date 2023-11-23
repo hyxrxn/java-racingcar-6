@@ -10,6 +10,7 @@ public class Game {
     void start() {
         setupGameDetails();
         play();
+        chooseWinner();
     }
 
     void setupGameDetails() {
@@ -25,5 +26,10 @@ public class Game {
             cars.updateLocation();
             cars.printLocation();
         }
+    }
+
+    void chooseWinner() {
+        outputView.printWinnerStartMessage();
+        cars.chooseWinner();
     }
 }
