@@ -22,5 +22,24 @@ public class Validator {
         }
     }
 
+    void checkCount(String input) {
+        checkInteger(input);
+        int reformatInput = Integer.parseInt(input);
+        checkNatural(reformatInput);
+    }
+
+    void checkInteger(String input) {
+        try {
+            Integer.parseInt(input);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    void checkNatural(int input) {
+        if (input < 1) {
+            throw new IllegalArgumentException();
+        }
+    }
 
 }

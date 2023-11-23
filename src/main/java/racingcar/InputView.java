@@ -11,4 +11,10 @@ public class InputView {
         validator.checkCarNames(parsedInputNames);
         return parsedInputNames;
     }
+
+    int readCount() {
+        String inputCount = Console.readLine();
+        validator.checkCount(inputCount);
+        return Integer.parseInt(inputCount);
+    }
 }
