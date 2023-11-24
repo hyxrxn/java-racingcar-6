@@ -41,5 +41,4 @@ public class Validator {
             throw new IllegalArgumentException();
         }
     }
-
 }

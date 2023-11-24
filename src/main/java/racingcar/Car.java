@@ -6,7 +6,7 @@ public class Car {
     private final String name;
     private int location;
 
-    Car(String name){
+    Car(String name) {
         this.name = name;
         this.location = 0;
     }
