@@ -6,9 +6,9 @@ import java.util.List;
 public class Cars {
     private final List<Car> cars;
 
-    Cars(String[] names){
+    Cars(String[] names) {
         cars = new ArrayList<>();
-        for (String name : names){
+        for (String name : names) {
             cars.add(new Car(name));
         }
     }
@@ -27,17 +27,27 @@ public class Cars {
     }
     // TODO: 출력을 outputView에서 해야할지 고민해보기
 
-    void chooseWinner(){
+    void chooseWinner() {
+        int farthestLocation = calculateFarthestLocation();
+        List<String> winners = makeWinners(farthestLocation);
+        System.out.println(String.join(", ", winners));
+    }
+
+    int calculateFarthestLocation() {
         int farthestLocation = 0;
         for (Car car : cars) {
             farthestLocation = Math.max(farthestLocation, car.getLocation());
         }
+        return farthestLocation;
+    }
+
+    List<String> makeWinners(int farthestLocation) {
         List<String> winners = new ArrayList<>();
         for (Car car : cars) {
-            if(car.getLocation() == farthestLocation){
+            if (car.getLocation() == farthestLocation) {
                 winners.add(car.getName());
             }
         }
-        System.out.println(String.join(", ", winners));
+        return winners;
     }
 }
