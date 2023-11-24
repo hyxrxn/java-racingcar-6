@@ -25,6 +25,7 @@ public class Cars {
         }
         System.out.println();
     }
+    // TODO: 출력을 outputView에서 해야할지 고민해보기
 
     void chooseWinner(){
         int farthestLocation = 0;
